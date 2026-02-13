@@ -348,8 +348,9 @@ h1 {
 /* Photo Styles */
 #photo-display {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
+    height: auto; /* Let the height adjust naturally */
+    max-height: 50vh; /* Limit height so it fits on mobile screens */
+    object-fit: contain; /* IMPORTANT: This makes sure the whole picture shows */
     border-radius: 15px;
     margin-bottom: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);

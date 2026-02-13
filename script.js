@@ -1,14 +1,14 @@
 // 🎀 MY MELODY GIF STAGES 🎀
 // Paste your links inside the quotes below
 const gifStages = [
-    "PASTE_CUTE_MELODY_LINK_HERE",     // 0: Normal
-    "PASTE_CONFUSED_MELODY_LINK_HERE", // 1: Confused
-    "PASTE_PLEADING_MELODY_LINK_HERE", // 2: Pleading
-    "PASTE_SAD_MELODY_LINK_HERE",      // 3: Sad
-    "PASTE_SAD_MELODY_LINK_HERE",      // 4: Sadder
-    "PASTE_CRYING_MELODY_LINK_HERE",   // 5: Devastated
-    "PASTE_CRYING_MELODY_LINK_HERE",   // 6: Very Devastated
-    "PASTE_RUNAWAY_MELODY_LINK_HERE"   // 7: Crying & Runaway
+    "https://i.pinimg.com/originals/b9/96/ab/b996ab4668b7bf2babacc91484b0d223.gif",     // 0: Normal
+    "https://cdn3.emoji.gg/emojis/32730-melody-confused.gif", // 1: Confused
+    "https://i.pinimg.com/originals/c4/6e/a2/c46ea2dccf87209b32cc35ad78b71e2d.gif", // 2: Pleading
+    "https://media.tenor.com/NJ4JvbtDdXYAAAAj/crying-my-melody-crying.gif",      // 3: Sad
+    "https://i.pinimg.com/originals/02/f4/21/02f421362de2963ba18c5a50ab96db66.gif",      // 4: Sadder
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyG8cbywjqNrjRGTW478sFKv96kiB4FzLoZQ&s",   // 5: Devastated
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGu10ljf2PNxHF07_xcGwfFBxKdI1huYTunQ&s",   // 6: Very Devastated
+    "https://i.pinimg.com/originals/6e/b8/3e/6eb83ebab628baf869222221fa62edb2.gif"   // 7: Crying & Runaway
 ]
 
 const noMessages = [
