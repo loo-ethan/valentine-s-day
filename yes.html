@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yay! 🎉</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="hearts-bg"></div>
+
+    <div class="container yes-container">
+        <h1 class="yes-title">Knew you would say yes! 🎉</h1>
+
+        <div class="gif-container">
+            <img id="cat-gif" src="https://media.tenor.com/eNHbizSfVb0AAAAj/lovemode-cute.gif" alt="celebrating">
+        </div>
+
+        <p class="yes-message">Pick a gift, my love! (Click to open) 👇</p>
+
+        <div class="gift-row">
+            <div class="gift-box" onclick="openGift('gift1')">
+                <div class="gift-emoji">📸</div>
+                <p>Our Memories</p>
+            </div>
+
+            <div class="gift-box" onclick="openGift('gift2')">
+                <div class="gift-emoji">🎵</div>
+                <p>Our Playlist</p>
+            </div>
+
+            <div class="gift-box" onclick="openGift('gift3')">
+                <div class="gift-emoji">💌</div>
+                <p>For You</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="gift1" class="modal hidden">
+        <div class="modal-content">
+            <h2>Us Together 📸</h2>
+            <img id="photo-display" src="photobooth1.jpg" alt="Our memory">
+            <div class="nav-buttons">
+                <button onclick="changePhoto(-1)">⬅️ Prev</button>
+                <button onclick="changePhoto(1)">Next ➡️</button>
+            </div>
+            <button class="close-btn" onclick="closeGift('gift1')">Close</button>
+        </div>
+    </div>
+
+    <div id="gift2" class="modal hidden">
+        <div class="modal-content">
+            <h2>Our Vibe 🎵</h2>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/playlist/14qD0G6BW4eLj93scgYOY5?si=2_-nVJsHTL2V7S42nQBRTA&pt=0932de521c29639fd10f33c203e737ba&pi=6O4bbfWURD6EQ" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <br><br>
+            <button class="close-btn" onclick="closeGift('gift2')">Close</button>
+        </div>
+    </div>
+
+    <div id="gift3" class="modal hidden">
+        <div class="modal-content">
+            <h2>My Heart 💌</h2>
+
+            <p id="letter-content" class="letter-text"></p>
+
+            <button id="lang-btn" class="lang-toggle" onclick="toggleLanguage()">
+                🇮🇩 Baca dalam Bahasa Indonesia
+            </button>
+
+            <br>
+            <button class="close-btn" onclick="closeGift('gift3')">Close</button>
+        </div>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="Ai Zen Me Le - Song.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="music-toggle" onclick="toggleMusic()" title="Toggle music">🔊</button>
+
+    <script src="yes-script.js"></script>
+</body>
+</html>
