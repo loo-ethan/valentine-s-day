@@ -85,23 +85,31 @@ function showTeaseMessage(msg) {
 
 function handleNoClick() {
     noClickCount++
+
+    // Cycle through guilt-trip messages
     const msgIndex = Math.min(noClickCount, noMessages.length - 1)
     noBtn.textContent = noMessages[msgIndex]
 
+    // --- SMART GROWTH LOGIC ---
     const currentSize = parseFloat(window.getComputedStyle(yesBtn).fontSize)
-    yesBtn.style.fontSize = `${currentSize * 1.35}px`
-    const padY = Math.min(18 + noClickCount * 5, 60)
-    const padX = Math.min(45 + noClickCount * 10, 120)
-    yesBtn.style.padding = `${padY}px ${padX}px`
+    const currentWidth = yesBtn.offsetWidth
+    const maxWidth = window.innerWidth * 0.75 // Stop growing if button hits 75% of screen width
 
-    if (noClickCount >= 2) {
-        const noSize = parseFloat(window.getComputedStyle(noBtn).fontSize)
-        noBtn.style.fontSize = `${Math.max(noSize * 0.85, 10)}px`
+    // Only grow if we are smaller than the screen limit AND smaller than 150px font
+    if (currentWidth < maxWidth && currentSize < 150) {
+        yesBtn.style.fontSize = `${currentSize * 1.2}px`
+
+        // Adjust padding but cap it so it doesn't get crazy huge
+        const padY = Math.min(18 + noClickCount * 3, 50)
+        const padX = Math.min(45 + noClickCount * 5, 100)
+        yesBtn.style.padding = `${padY}px ${padX}px`
     }
 
+    // Swap gif
     const gifIndex = Math.min(noClickCount, gifStages.length - 1)
     swapGif(gifStages[gifIndex])
 
+    // Runaway starts at click 5
     if (noClickCount >= 5 && !runawayEnabled) {
         enableRunaway()
         runawayEnabled = true
